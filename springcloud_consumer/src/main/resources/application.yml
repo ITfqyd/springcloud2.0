@@ -1,0 +1,22 @@
+####订单服务器端口号
+server:
+  port: 8001
+###服务别名---服务器注册到注册中心的名称
+spring:
+  application:
+    name: fqyd-order
+eureka:
+  client:
+    ###需要将我的服务注册到eureka上
+    registerWithEureka: true
+    ###检索服务
+    fetchRegistry: true
+    ###当前服务注册到eureka服务地址
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+  instance:
+    ##eureka客户端向服务器端发送心跳间隔时间,单位为秒
+    lease-renewal-interval-in-seconds: 1
+    ##eureka服务器端在收到最后一次心跳等待的时间上限，超时则踢出，单位为秒
+    lease-expiration-duration-in-seconds: 2
+

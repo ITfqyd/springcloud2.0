@@ -1,0 +1,12 @@
+####订单服务器端口号
+server:
+  port: 8001
+###服务别名---服务器注册到注册中心的名称
+spring:
+  application:
+    name: feign-order
+eureka:
+  client:
+    ###当前服务注册到eureka服务地址
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/

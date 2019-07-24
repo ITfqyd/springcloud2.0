@@ -1,0 +1,16 @@
+###会员服务的端口号
+server:
+  port: 8503
+###服务别名----服务注册到注册中心名称
+spring:
+  application:
+    name: consul-member
+  cloud:
+    consul:
+      ###consul地址
+      host: localhost
+      ###consul端口号
+      port: 8500
+      discovery:
+        ##服务器地址，默认是自动生成的一个字符串
+        hostname: 192.168.7.139
